@@ -14,7 +14,7 @@ def get_hashrate(url):
 			return int(info['data'])								#Returns the hashrate							 
 
 		else:												#If did occur an error									  
-			logging.error('Nanopool API: '+ info['error'] + ', trying again in 30 seconds')		#Logs the error		
+			logging.error('ethermine API: '+ info['error'] + ', trying again in 30 seconds')		#Logs the error
 			sleep(30)										#Waits 30 seconds
 		
 		
@@ -47,7 +47,7 @@ if len(argv) == 6: 												#If there are enough user arguments
 	delay = int(delay) * 60											#Multiplies the time by 60 to turn it into seconds
 	popen(path + ' ' + args)										#Starts ethminer.exe
 	sleep(delay)												#Waits the time chosed by the user		   
-	check_hashrate('https://api.nanopool.org/v1/eth/hashrate/' + wallet) 					#Runs the check_hashrate function
+	check_hashrate('https://api.ethermine.org//miner/:miner/currentStats' + wallet) 					#Runs the check_hashrate function
 
 else:														#If there aren't enough user arguments
 	logging.critical('not enough arguments')								#Logs the error

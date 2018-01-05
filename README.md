@@ -1,18 +1,18 @@
 # Unstoppable Ethereum etherminerVer
-A python script for nanopool that doesn't allow your rig to stop
+A python script for ethermine that doesn't allow your rig to stop
 
 <b>Requirements</b>
 
 <ul>
 <li>A Windows machine (tested on Win10 x64)</li>
-<li>An Ethereum miner (tested on <a href="https://github.com/Genoil/cpp-ethereum">Genoil miner</a>)</li>
-<li><a href="https://eth.nanopool.org/">Nanopool</a></li>
+<li>An Ethereum miner (tested on <a href="https://bitcointalk.org/index.php?topic=1433925.0">Claymore miner</a>)</li>
+<li><a href="https://ethermine.org/">ethermine</a></li>
 <li><a href="https://www.python.org/downloads/release/python-362/">Python 3.6</a></li>
 </ul>
 
 <b>How it works</b>
 
-The script gets the hashrate of your rig from the nanopool api, if the hashrate is zero that means the miner is not working and it restarts.
+The script gets the hashrate of your rig from the ethermine api, if the hashrate is zero that means the miner is not working and it restarts.
 
 If you want a more in depth explanation see the source code that is all commented.
 
@@ -28,9 +28,12 @@ If you want a more in depth explanation see the source code that is all commente
 
 <b>Did this help you?</b>
 
-If this helped you feel free to return the favor by donating some <a href="https://eth.nanopool.org/account/0xc5c5A034db718cE4Abb6971c860D10AeD74833aC">Ethereum</a> or <a href="https://etherscan.io/address/0xc5c5a034db718ce4abb6971c860d10aed74833ac">Bitcoin</a> to me.
+If this helped you feel free to present  small tips! 
 
-You can also help by improving the code or correcting my grammar error (English isn't my first language), all help is appreciated!
+BTC: 3FgFjvTtTPFZ7np8uMD6UMmg27uK1Y761r
+
+ETH: 0xB6AC6C7A238797AA6312468D560721b4b8eF7f20
+
 
 And please upvote the <a href="https://www.reddit.com/r/EtherMining/comments/6nuuay/an_automatic_python_script_that_restarts_the/">Reddit thread</a> so more people can be helped
 
