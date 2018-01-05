@@ -1,4 +1,4 @@
-# Unstoppable Ethereum
+# Unstoppable Ethereum etherminerVer
 A python script for nanopool that doesn't allow your rig to stop
 
 <b>Requirements</b>
