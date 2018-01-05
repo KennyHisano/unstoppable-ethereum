@@ -11,7 +11,7 @@ def get_hashrate(url):
 		req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})					#Requests the url like Mozilla 5.0 to avoid http error 403			  
 		info = json.loads(urlopen(req).read().decode('utf-8'))						#Creates the json object "info" with the data from the api
 		if info['status']:										#If didn't occur errors								 
-			return int(info['data'])								#Returns the hashrate							 
+			return info['data']								#Returns the hashrate							 
 
 		else:												#If did occur an error									  
 			logging.error('ethermine API: '+ info['error'] + ', trying again in 30 seconds')		#Logs the error
