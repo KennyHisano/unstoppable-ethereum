@@ -9,7 +9,7 @@ from time import sleep                                                          
 def get_hashrate(url):
 	while True:												#Repeats the procedure until hashrate is returned
 		req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})					#Requests the url like Mozilla 5.0 to avoid http error 403			  
-		info = json.loads(urlopen(req).read().decode('utf-8'))						#Creates the json object "info" with the data from the api			 
+		info = json.loads(urlopen(req).read().decode('utf-8'))						#Creates the json object "info" with the data from the api
 		if info['status']:										#If didn't occur errors								 
 			return int(info['data'])								#Returns the hashrate							 
 
@@ -47,7 +47,7 @@ if len(argv) == 6: 												#If there are enough user arguments
 	delay = int(delay) * 60											#Multiplies the time by 60 to turn it into seconds
 	popen(path + ' ' + args)										#Starts ethminer.exe
 	sleep(delay)												#Waits the time chosed by the user		   
-	check_hashrate('https://api.ethermine.org//miner/:miner/currentStats' + wallet) 					#Runs the check_hashrate function
+	check_hashrate('https://api.ethermine.org//miner/:miner/currentStats/' + wallet) 					#Runs the check_hashrate function
 
 else:														#If there aren't enough user arguments
 	logging.critical('not enough arguments')								#Logs the error
