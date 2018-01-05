@@ -47,7 +47,7 @@ if len(argv) == 6: 												#If there are enough user arguments
 	delay = int(delay) * 60											#Multiplies the time by 60 to turn it into seconds
 	popen(path + ' ' + args)										#Starts ethminer.exe
 	sleep(delay)												#Waits the time chosed by the user		   
-	check_hashrate('https://api.ethermine.org//miner/:miner/currentStats/' + wallet) 					#Runs the check_hashrate function
+	check_hashrate('https://api.ethermine.org/miner/' + wallet + '/currentStats/') 					#Runs the check_hashrate function
 
 else:														#If there aren't enough user arguments
 	logging.critical('not enough arguments')								#Logs the error
